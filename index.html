@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        :root {{
+        :root {
             --primary: #6366f1;
             --primary-dark: #4f46e5;
             --primary-glow: rgba(99,102,241,0.25);
@@ -20,17 +20,17 @@
             --text: #f1f1f3;
             --muted: #9090a8;
             --accent: #a855f7;
-        }}
-        * {{ box-sizing: border-box; margin: 0; padding: 0; }}
-        body {{
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
             font-family: 'Inter', -apple-system, sans-serif;
             background: var(--bg);
             color: var(--text);
             line-height: 1.6;
-        }}
+        }
 
         /* HEADER */
-        header {{
+        header {
             position: sticky; top: 0; z-index: 100;
             background: rgba(10,10,15,0.85);
             backdrop-filter: blur(20px);
@@ -39,59 +39,59 @@
             display: flex; align-items: center;
             justify-content: space-between;
             height: 62px;
-        }}
-        .logo {{
+        }
+        .logo {
             font-size: 1.15em; font-weight: 700;
             text-decoration: none; color: var(--text);
             display: flex; align-items: center; gap: 8px;
-        }}
-        .logo-icon {{
+        }
+        .logo-icon {
             width: 28px; height: 28px; border-radius: 8px;
             background: linear-gradient(135deg, var(--primary), var(--accent));
             display: flex; align-items: center; justify-content: center;
             font-size: 14px;
-        }}
-        .logo span {{ color: var(--primary); }}
-        nav {{ display: flex; gap: 4px; }}
-        nav a {{
+        }
+        .logo span { color: var(--primary); }
+        nav { display: flex; gap: 4px; }
+        nav a {
             padding: 6px 14px; border-radius: 8px;
             text-decoration: none; color: var(--muted);
             font-size: 0.88em; transition: all 0.2s;
-        }}
-        nav a:hover {{ color: var(--text); background: var(--card); }}
+        }
+        nav a:hover { color: var(--text); background: var(--card); }
 
         /* HERO */
-        .hero {{
+        .hero {
             position: relative; overflow: hidden;
             padding: 100px 24px 90px;
             text-align: center;
-        }}
-        .hero-bg {{
+        }
+        .hero-bg {
             position: absolute; inset: 0;
             background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(99,102,241,0.15) 0%, transparent 70%);
             pointer-events: none;
-        }}
-        .hero-grid {{
+        }
+        .hero-grid {
             position: absolute; inset: 0; opacity: 0.03;
             background-image: linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px),
                               linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px);
             background-size: 40px 40px;
-        }}
-        .badge {{
+        }
+        .badge {
             display: inline-flex; align-items: center; gap: 6px;
             background: rgba(99,102,241,0.12);
             border: 1px solid rgba(99,102,241,0.25);
             color: #a5b4fc; font-size: 0.78em; font-weight: 500;
             padding: 5px 14px; border-radius: 20px; margin-bottom: 24px;
-        }}
-        .badge-dot {{
+        }
+        .badge-dot {
             width: 6px; height: 6px; border-radius: 50%;
             background: #6366f1;
             box-shadow: 0 0 8px #6366f1;
             animation: pulse 2s infinite;
-        }}
-        @keyframes pulse {{ 0%,100%{{opacity:1}} 50%{{opacity:0.4}} }}
-        .hero h1 {{
+        }
+        @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
+        .hero h1 {
             font-size: clamp(2em, 5vw, 3.2em);
             font-weight: 700; line-height: 1.2;
             margin-bottom: 18px;
@@ -99,47 +99,47 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-        }}
-        .hero p {{
+        }
+        .hero p {
             font-size: 1.1em; color: var(--muted);
             max-width: 540px; margin: 0 auto 32px;
-        }}
-        .markets {{
+        }
+        .markets {
             display: inline-flex; gap: 12px;
             background: var(--card);
             border: 1px solid var(--card-border);
             padding: 8px 20px; border-radius: 30px;
             font-size: 0.88em; color: var(--muted);
-        }}
+        }
 
         /* STATS */
-        .stats {{
+        .stats {
             display: flex; justify-content: center; gap: 40px;
             padding: 32px 24px;
             border-top: 1px solid var(--card-border);
             border-bottom: 1px solid var(--card-border);
             background: var(--bg2);
-        }}
-        .stat {{ text-align: center; }}
-        .stat-num {{ font-size: 1.6em; font-weight: 700; color: var(--text); }}
-        .stat-num span {{ color: var(--primary); }}
-        .stat-label {{ font-size: 0.78em; color: var(--muted); margin-top: 2px; }}
+        }
+        .stat { text-align: center; }
+        .stat-num { font-size: 1.6em; font-weight: 700; color: var(--text); }
+        .stat-num span { color: var(--primary); }
+        .stat-label { font-size: 0.78em; color: var(--muted); margin-top: 2px; }
 
         /* ARTICLES */
-        .container {{ max-width: 1080px; margin: 0 auto; padding: 60px 24px; }}
-        .section-header {{
+        .container { max-width: 1080px; margin: 0 auto; padding: 60px 24px; }
+        .section-header {
             display: flex; align-items: center; gap: 12px;
             margin-bottom: 32px;
-        }}
-        .section-title {{ font-size: 1.2em; font-weight: 600; }}
-        .section-line {{ flex: 1; height: 1px; background: var(--card-border); }}
+        }
+        .section-title { font-size: 1.2em; font-weight: 600; }
+        .section-line { flex: 1; height: 1px; background: var(--card-border); }
 
-        .articles-grid {{
+        .articles-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 20px;
-        }}
-        .card {{
+        }
+        .card {
             background: var(--card);
             border: 1px solid var(--card-border);
             border-radius: 16px; padding: 24px;
@@ -147,17 +147,17 @@
             display: block;
             transition: all 0.25s;
             position: relative; overflow: hidden;
-        }}
-        .card::before {{
+        }
+        .card::before {
             content: "";
             position: absolute; inset: 0;
             background: linear-gradient(135deg, var(--primary-glow), transparent);
             opacity: 0; transition: opacity 0.3s;
             border-radius: 16px;
-        }}
-        .card:hover {{ border-color: rgba(99,102,241,0.4); transform: translateY(-3px); }}
-        .card:hover::before {{ opacity: 1; }}
-        .card-tag {{
+        }
+        .card:hover { border-color: rgba(99,102,241,0.4); transform: translateY(-3px); }
+        .card:hover::before { opacity: 1; }
+        .card-tag {
             display: inline-block;
             font-size: 0.7em; font-weight: 600;
             text-transform: uppercase; letter-spacing: 1px;
@@ -166,46 +166,46 @@
             border: 1px solid rgba(99,102,241,0.2);
             padding: 3px 10px; border-radius: 6px;
             margin-bottom: 14px;
-        }}
-        .card h3 {{
+        }
+        .card h3 {
             font-size: 1em; font-weight: 600;
             line-height: 1.5; margin-bottom: 10px;
             color: var(--text);
-        }}
-        .card p {{ font-size: 0.86em; color: var(--muted); line-height: 1.7; }}
-        .card-footer {{
+        }
+        .card p { font-size: 0.86em; color: var(--muted); line-height: 1.7; }
+        .card-footer {
             display: flex; justify-content: space-between;
             align-items: center; margin-top: 18px;
             padding-top: 14px;
             border-top: 1px solid var(--card-border);
             font-size: 0.78em;
-        }}
-        .read-more {{
+        }
+        .read-more {
             color: #a5b4fc; font-weight: 500;
             display: flex; align-items: center; gap: 4px;
-        }}
-        .read-more::after {{ content: "→"; transition: transform 0.2s; }}
-        .card:hover .read-more::after {{ transform: translateX(4px); }}
+        }
+        .read-more::after { content: "→"; transition: transform 0.2s; }
+        .card:hover .read-more::after { transform: translateX(4px); }
 
         /* DISCLAIMER */
-        .disclaimer {{
+        .disclaimer {
             background: rgba(234,179,8,0.06);
             border: 1px solid rgba(234,179,8,0.2);
             border-radius: 10px; padding: 14px 18px;
             font-size: 0.83em; color: #a09060;
             margin-bottom: 40px;
-        }}
+        }
 
         /* FOOTER */
-        footer {{
+        footer {
             background: var(--bg2);
             border-top: 1px solid var(--card-border);
             text-align: center; padding: 40px 24px;
             font-size: 0.83em; color: var(--muted);
             line-height: 2;
-        }}
-        footer a {{ color: #6366f1; text-decoration: none; margin: 0 12px; }}
-        footer a:hover {{ color: #a5b4fc; }}
+        }
+        footer a { color: #6366f1; text-decoration: none; margin: 0 12px; }
+        footer a:hover { color: #a5b4fc; }
     </style>
 </head>
 <body>
@@ -236,7 +236,7 @@
 
 <div class="stats">
     <div class="stat">
-        <div class="stat-num">4<span>+</span></div>
+        <div class="stat-num">2<span>+</span></div>
         <div class="stat-label">Artigos publicados</div>
     </div>
     <div class="stat">
@@ -262,35 +262,17 @@
     <div class="articles-grid">
         <a class="card" href="ferramentas-ia-essenciais-criadores-conteudo-2025.html">
             <div class="card-tag">Review</div>
-            <h3>Ferramentas Ia Essenciais Criadores Conteudo 2025</h3>
-            <p>Guia completo com reviews honestos e links para comprar.</p>
-            <div class="card-footer">
-                <span style="color:#555">🇵🇹 🇧🇷</span>
-                <span class="read-more">Ler artigo</span>
-            </div>
-        </a>
-        <a class="card" href="ganhar-dinheiro-inteligencia-artificial-criadores-conteudo.html">
-            <div class="card-tag">Review</div>
-            <h3>Ganhar Dinheiro Inteligencia Artificial Criadores Conteudo</h3>
-            <p>Guia completo com reviews honestos e links para comprar.</p>
-            <div class="card-footer">
-                <span style="color:#555">🇵🇹 🇧🇷</span>
-                <span class="read-more">Ler artigo</span>
-            </div>
-        </a>
-        <a class="card" href="ganhe-dinheiro-ia-criadores-conteudo-2025.html">
-            <div class="card-tag">Review</div>
-            <h3>Ganhe Dinheiro Ia Criadores Conteudo 2025</h3>
-            <p>Guia completo com reviews honestos e links para comprar.</p>
+            <h3>Ferramentas de IA Essenciais para Criadores de Conteúdo em 2025</h3>
+            <p>Descobre as melhores ferramentas de IA para criadores em Portugal. Reviews honestos com links para comprar na Amazon.</p>
             <div class="card-footer">
                 <span style="color:#555">🇵🇹 🇧🇷</span>
                 <span class="read-more">Ler artigo</span>
             </div>
         </a>
         <a class="card" href="melhores-cursos-ferramentas-ia-criadores-portugal-brasil.html">
-            <div class="card-tag">Review</div>
-            <h3>Melhores Cursos Ferramentas Ia Criadores Portugal Brasil</h3>
-            <p>Guia completo com reviews honestos e links para comprar.</p>
+            <div class="card-tag">Guia</div>
+            <h3>Os Melhores Cursos de Ferramentas de IA para Criadores (2025)</h3>
+            <p>Os melhores cursos online sobre ferramentas de IA para criadores de conteúdo em Portugal e Brasil.</p>
             <div class="card-footer">
                 <span style="color:#555">🇵🇹 🇧🇷</span>
                 <span class="read-more">Ler artigo</span>
